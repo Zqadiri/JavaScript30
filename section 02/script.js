@@ -80,22 +80,47 @@ const Jon = { // ? object literal syntax
     //  calc: function calc(birthYear){
     //      return 2037 - birthYear;
     //  }
-     calc: function calc(){
-        return 2037 - this.birthYear;
+
+     calc: function (){
+         this.age = 2037 - this.birthYear;
+        return this.age;
+     },
+
+     getSummary: function (){
+        return `${this.firstName} is a ${this.calc()} years old man !`;
      }
 };
 
-console.log (Jon.calc());
+console.log (Jon .calc()); //? clculate the age once to retrieve the value later
 
 Jon.location = 'Brazil';
 Jon['gender'] = 'male';
 
-console.log(this);
 console.log(Jon.brothers);
 
 const nameKey = 'Name';
 
 console.log(Jon['first' + nameKey]);
+
+console.log(Jon.getSummary());
+
+// ! loops :)
+
+for (let i = friends.length - 1; i >= 0 ; i--){
+    console.log(friends[i]);
+}
+
+//! while :)
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6){
+    console.log(`you rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+    if (dice === 6 )
+        console.log('done');
+}
+
 
 
 
