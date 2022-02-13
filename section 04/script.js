@@ -21,7 +21,7 @@ const number = Math.trunc(Math.random() * 20) + 1;
 let score = 20; // do not rely on the DOM to store data
 let highScore = 0;
 
-document.querySelector('.number').textContent = number;
+// document.querySelector('.number').textContent = number;
 
 const displayMsg = function(msg){
     document.querySelector('.message').textContent = msg;
@@ -57,5 +57,9 @@ document.querySelector('.check').addEventListener('click', function (){
 })
 
 document.querySelector('.again').addEventListener('click', function(){
-    
+    number = Math.trunc(Math.random() * 20) + 1;
+    document.querySelector('.score').textContent = 20;
+    document.querySelector('.message').textContent = "Start guessing ...";
+    document.querySelector('.number').value = '';
+    document.querySelector('body').style.backgroundColor = '#222';
 })
